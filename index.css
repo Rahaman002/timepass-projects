@@ -8,19 +8,25 @@ body
 {
     font-family: system-ui;
 }
+html
+{
+    scroll-behavior: smooth;
+}
 #header
 {
     display:flex;
     align-items: center;
     justify-content: space-between;
-    background-color: bisque;
+    background-color: rgb(82, 88, 73);
     padding:10px 20px;
-    box-shadow: 0 0px 15px 0.4px black;
+    box-shadow: 0 0px 5px 0.1px black;
+    position: sticky;
+    top:0;
 
 }
 #header a img
 {
-    height:70px;
+    height:50px;
 }
 #navbar ul
 {
@@ -35,14 +41,22 @@ body
     font-size:25px;
     font-weight: 500;
     position: relative;
-    transition: color 1s;
+    transition: transform 1s,color 1s;
 }
 #navbar ul li:hover
 {
-    color:aqua;
+
+    transform:scale(1.1);
 }
 #navbar ul li a {
+    color:rgb(253, 234, 234);
     text-decoration: none;
+    transition: color 1s;
+  }
+  #navbar ul li a:hover
+  {
+    color:rgb(7, 217, 245);
+
   }
   
   #navbar ul li a::after {
@@ -53,10 +67,57 @@ body
     background-color: blue;
     top: 27px;
     left: 16px;
-    transition: width 1.5s,color 1s;
+    transition: width 1.5s;
   }
   
   #navbar ul li a:hover::after {
     width: 50%;
+  }
+  h1 {
+    font-family: Courier, monospace;
+}
+p
+{
+    font-family:"Source Sans Pro", "Arial", sans-serif;
+    text-align: center;
+}
+  #items
+  {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1.1fr));
+    row-gap: 13px;
+    column-gap: 15px;
+    padding:2px 15px;
+    
+  }
+  .product img
+  {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    padding:10px 0px;
+    transition: transform 1.2s;
+  }
+  .product img:hover
+  {
+    transform: scale(1.1);
+  }
+
+  .product
+  {
+    height:500px;
+    background-color:rgb(224, 224, 224);
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction:column;
+    border-radius:2px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  }
+  .products
+  {
+    padding: 20px 10px;
   }
   
